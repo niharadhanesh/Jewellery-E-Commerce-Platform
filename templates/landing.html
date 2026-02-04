@@ -1060,6 +1060,92 @@
 .collage-wrapper:hover .main-img {
     transform: none;
 }
+/* ---------- TABLET VIEW ---------- */
+@media (max-width: 1024px) {
+    .collage-wrapper {
+        width: 340px;
+        height: 340px;
+    }
+
+    .popup-img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .img-1 {
+        top: -45px;
+        left: -45px;
+    }
+
+    .img-2 {
+        bottom: -45px;
+        right: -45px;
+    }
+}
+
+/* ---------- MOBILE VIEW ---------- */
+@media (max-width: 768px) {
+    .hero-right {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .collage-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .popup-img {
+        width: 150px;
+        height: 150px;
+        opacity: 1;              /* Always visible */
+        transform: scale(1);
+    }
+
+    /* Re-position popup images neatly */
+    .img-1 {
+        top: -30px;
+        left: -20px;
+        transform: rotate(-6deg);
+    }
+
+    .img-2 {
+        bottom: -30px;
+        right: -20px;
+        transform: rotate(6deg);
+    }
+
+    /* Disable hover-only animation on mobile */
+    .collage-wrapper:hover .popup-img,
+    .collage-wrapper:hover .img-1,
+    .collage-wrapper:hover .img-2 {
+        transform: none;
+    }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 480px) {
+    .collage-wrapper {
+        width: 240px;
+        height: 240px;
+    }
+
+    .popup-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .img-1 {
+        top: -22px;
+        left: -15px;
+    }
+
+    .img-2 {
+        bottom: -22px;
+        right: -15px;
+    }
+}
 
 </style>
 <script>
@@ -1198,59 +1284,60 @@ document.querySelector(".arrow-right").addEventListener("click", () => {
         <button>Brooches</button>
     </div>
     
-    <div class="product-grid">
-        <div class="product-card stagger-item">
-            <img src="{% static 'images/gold1.jpg' %}" alt="Copper Gold plated">
-            <h3>White Brass American Diamond</h3>
-            <p>$79.50 USD</p>
-            <span class="arrow">→</span>
-        </div>
-        <div class="product-card stagger-item">
-            <img src="{% static 'images/gold2.jpg' %}" alt="Gold Hoop Earrings">
-            <h3>Gold Hoop Earrings</h3>
-            <p>$49.00 USD</p>
-            <span class="arrow">→</span>
-        </div>
-        <div class="product-card stagger-item">
-            <img src="{% static 'images/gold3.jpg' %}" alt="Zircon Gold Plated Ring">
-            <h3>Zircon Gold Plated Ring</h3>
-            <p>$45.75 USD</p>
-            <span class="arrow">→</span>
-        </div>
-        <div class="product-card stagger-item">
-            <img src="{% static 'images/gold4.jpg' %}" alt="Gold Hoop Bracelet">
-            <h3>Rose Gold Bangle</h3>
-            <p>$50.74 USD</p>
-            <span class="arrow">→</span>
-        </div>
+   <div class="product-grid">
+    <div class="product-card stagger-item">
+        <img src="{% static 'images/gold1.jpg' %}" alt="Copper Gold plated">
+        <h3>White Brass American Diamond</h3>
+        <p>₹6,599</p>
+        <span class="arrow">→</span>
     </div>
-    
-    <div class="product-grid">
-        <div class="product-card stagger-item">
-            <img src="{% static 'images/gold5.jpg' %}" alt="Gold Hoop Earrings">
-            <h3>Gold Hoop Earrings</h3>
-            <p>$49.00 USD</p>
-            <span class="arrow">→</span>
-        </div>
-        <div class="product-card stagger-item">
-            <img src="{% static 'images/gold6.jpg' %}" alt="Copper Gold plated">
-            <h3>White Brass American Diamond</h3>
-            <p>$79.50 USD</p>
-            <span class="arrow">→</span>
-        </div>
-        <div class="product-card stagger-item">
-            <img src="{% static 'images/gold7.jpg' %}" alt="Gold Hoop Bracelet">
-            <h3>Rose Gold Bangle</h3>
-            <p>$50.74 USD</p>
-            <span class="arrow">→</span>
-        </div>
-        <div class="product-card stagger-item">
-            <img src="{% static 'images/gold8.jpg' %}" alt="Zircon Gold Plated Ring">
-            <h3>Zircon Gold Plated Ring</h3>
-            <p>$45.75 USD</p>
-            <span class="arrow">→</span>
-        </div>
+    <div class="product-card stagger-item">
+        <img src="{% static 'images/gold2.jpg' %}" alt="Gold Hoop Earrings">
+        <h3>Gold Hoop Earrings</h3>
+        <p>₹4,099</p>
+        <span class="arrow">→</span>
     </div>
+    <div class="product-card stagger-item">
+        <img src="{% static 'images/gold3.jpg' %}" alt="Zircon Gold Plated Ring">
+        <h3>Zircon Gold Plated Ring</h3>
+        <p>₹3,799</p>
+        <span class="arrow">→</span>
+    </div>
+    <div class="product-card stagger-item">
+        <img src="{% static 'images/gold4.jpg' %}" alt="Gold Hoop Bracelet">
+        <h3>Rose Gold Bangle</h3>
+        <p>₹4,299</p>
+        <span class="arrow">→</span>
+    </div>
+</div>
+
+<div class="product-grid">
+    <div class="product-card stagger-item">
+        <img src="{% static 'images/gold5.jpg' %}" alt="Gold Hoop Earrings">
+        <h3>Gold Hoop Earrings</h3>
+        <p>₹4,099</p>
+        <span class="arrow">→</span>
+    </div>
+    <div class="product-card stagger-item">
+        <img src="{% static 'images/gold6.jpg' %}" alt="Copper Gold plated">
+        <h3>White Brass American Diamond</h3>
+        <p>₹6,599</p>
+        <span class="arrow">→</span>
+    </div>
+    <div class="product-card stagger-item">
+        <img src="{% static 'images/gold7.jpg' %}" alt="Gold Hoop Bracelet">
+        <h3>Rose Gold Bangle</h3>
+        <p>₹4,299</p>
+        <span class="arrow">→</span>
+    </div>
+    <div class="product-card stagger-item">
+        <img src="{% static 'images/gold8.jpg' %}" alt="Zircon Gold Plated Ring">
+        <h3>Zircon Gold Plated Ring</h3>
+        <p>₹3,799</p>
+        <span class="arrow">→</span>
+    </div>
+</div>
+
 </section>
 
 <!-- IMAGE BANNER -->
